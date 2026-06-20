@@ -1,0 +1,2386 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="PalDefender (PalWorld Dedicated Server anticheat)">
+      
+      
+        <meta name="author" content="Zvend">
+      
+      
+        <link rel="canonical" href="https://ultimeit.github.io/PalDefender/zh/Commands/">
+      
+      
+        <link rel="prev" href="../Partnerships/">
+      
+      
+        <link rel="next" href="../FileTypes/">
+      
+      
+        
+          <link rel="alternate" href="../../Commands/" hreflang="en">
+        
+          <link rel="alternate" href="../../de/Commands/" hreflang="de">
+        
+          <link rel="alternate" href="./" hreflang="zh">
+        
+      
+      
+      <link rel="icon" href="../../assets/LogoWiki.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>命令 - PalDefender Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+  
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22m8.533.133%205.25%201.68A1.75%201.75%200%200%201%2015%203.48V7c0%201.566-.32%203.182-1.303%204.682-.983%201.498-2.585%202.813-5.032%203.855a1.7%201.7%200%200%201-1.33%200c-2.447-1.042-4.049-2.357-5.032-3.855C1.32%2010.182%201%208.566%201%207V3.48a1.75%201.75%200%200%201%201.217-1.667l5.25-1.68a1.75%201.75%200%200%201%201.066%200m-.61%201.429zl-5.25%201.68a.25.25%200%200%200-.174.237V7c0%201.36.275%202.666%201.057%203.859.784%201.194%202.121%202.342%204.366%203.298a.2.2%200%200%200%20.154%200c2.245-.957%203.582-2.103%204.366-3.297C13.225%209.666%2013.5%208.358%2013.5%207V3.48a.25.25%200%200%200-.174-.238l-5.25-1.68a.25.25%200%200%200-.153%200M11.28%206.28l-3.5%203.5a.75.75%200%200%201-1.06%200l-1.5-1.5a.749.749%200%200%201%20.326-1.275.75.75%200%200%201%20.734.215l.97.97%202.97-2.97a.75.75%200%200%201%201.042.018.75.75%200%200%201%20.018%201.042%22/%3E%3C/svg%3E');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M9.504.43a1.516%201.516%200%200%201%202.437%201.713L10.415%205.5h2.123c1.57%200%202.346%201.909%201.22%203.004l-7.34%207.142a1.25%201.25%200%200%201-.871.354h-.302a1.25%201.25%200%200%201-1.157-1.723L5.633%2010.5H3.462c-1.57%200-2.346-1.909-1.22-3.004zm1.047%201.074L3.286%208.571A.25.25%200%200%200%203.462%209H6.75a.75.75%200%200%201%20.694%201.034l-1.713%204.188%206.982-6.793A.25.25%200%200%200%2012.538%207H9.25a.75.75%200%200%201-.683-1.06l2.008-4.418.003-.006-.004-.009-.006-.006-.008-.001q-.005%200-.009.004%22/%3E%3C/svg%3E');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M6.457%201.047c.659-1.234%202.427-1.234%203.086%200l6.082%2011.378A1.75%201.75%200%200%201%2014.082%2015H1.918a1.75%201.75%200%200%201-1.543-2.575Zm1.763.707a.25.25%200%200%200-.44%200L1.698%2013.132a.25.25%200%200%200%20.22.368h12.164a.25.25%200%200%200%20.22-.368Zm.53%203.996v2.5a.75.75%200%200%201-1.5%200v-2.5a.75.75%200%200%201%201.5%200M9%2011a1%201%200%201%201-2%200%201%201%200%200%201%202%200%22/%3E%3C/svg%3E');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M9.533.753V.752c.217%202.385%201.463%203.626%202.653%204.81C13.37%206.74%2014.498%207.863%2014.498%2010c0%203.5-3%206-6.5%206S1.5%2013.512%201.5%2010c0-1.298.536-2.56%201.425-3.286.376-.308.862%200%201.035.454C4.46%208.487%205.581%208.419%206%208c.282-.282.341-.811-.003-1.5C4.34%203.187%207.035.75%208.77.146c.39-.137.726.194.763.607M7.998%2014.5c2.832%200%205-1.98%205-4.5%200-1.463-.68-2.19-1.879-3.383l-.036-.037c-1.013-1.008-2.3-2.29-2.834-4.434-.322.256-.63.579-.864.953-.432.696-.621%201.58-.046%202.73.473.947.67%202.284-.278%203.232-.61.61-1.545.84-2.403.633a2.8%202.8%200%200%201-1.436-.874A3.2%203.2%200%200%200%203%2010c0%202.53%202.164%204.5%204.998%204.5%22/%3E%3C/svg%3E');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../" title="PalDefender Wiki" class="md-header__button md-logo" aria-label="PalDefender Wiki" data-md-component="logo">
+      
+  <img src="../../assets/LogoWiki.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PalDefender Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              命令
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="选择当前语言">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../Commands/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../de/Commands/" hreflang="de" class="md-select__link">
+              Deutsch (German)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="zh" class="md-select__link">
+              简体中文 (Chinese)
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Ultimeit/PalDefender" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Ultimeit/PalDefender
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../FAQ/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  常见问题
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Installation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  安装
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Partnerships/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  合作伙伴
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Commands
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../FileTypes/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  FileTypes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../RESTAPI/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  RESTAPI
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="PalDefender Wiki" class="md-nav__button md-logo" aria-label="PalDefender Wiki" data-md-component="logo">
+      
+  <img src="../../assets/LogoWiki.png" alt="logo">
+
+    </a>
+    PalDefender Wiki
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Ultimeit/PalDefender" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Ultimeit/PalDefender
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    常见问题
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安装
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Partnerships/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    合作伙伴
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="./" class="md-nav__link md-nav__link--active">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Commands
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Commands
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../FileTypes/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FileTypes
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    FileTypes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FileTypes/Config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🛠️ Config.json
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FileTypes/PalSummon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📄 PalSummon.json
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FileTypes/PalTemplate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📄 PalTemplate.json
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../RESTAPI/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RESTAPI
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    RESTAPI
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RESTAPI/authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    认证和设置
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RESTAPI/endpoints/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    端点
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_4" id="__nav_7_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Examples
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RESTAPI/Examples/Python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python 示例
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        什么是命令？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        谁可以使用命令？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        命令列表
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="导航栏" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../" class="md-path__link">
+        
+  <span class="md-ellipsis">
+    首页
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Zh
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="./" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Commands
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="_1">命令</h1>
+<h2 id="_2">什么是命令？</h2>
+<p>命令是特殊的基于文本的指令，允许您与游戏交互。通过在聊天中输入命令，您可以执行传送、生成生物或管理玩家等操作。命令通常以 <span class="var-command">/</span> 开头，后跟命令名称和可选参数。</p>
+<h2 id="_3">谁可以使用命令？</h2>
+<p><strong>目前没有非管理员玩家可以使用的命令。</strong>
+在当前版本中，只有管理员和 RCON 命令可用。</p>
+<h2 id="_4">命令列表</h2>
+<div class="admonition note">
+<p class="admonition-title">命令语法</p>
+<p><span class="var-command">/command_name&nbsp;</span><span class="var-command-arg">&lt;required_argument&gt;&nbsp;</span><span class="var-command-optional">[optional_argument={?}]</span>
+<br>
+<br>
+<p>
+<span class="var-command-arg">&lt;required_argument&gt;</span> → 必须包含。<br>
+<span class="var-command-optional">[optional_argument={?}]</span> → 可以省略。<span class="var-command-optional">{?}</span> 表示省略时使用的默认值。
+</p>
+<p>
+参数有不同的类型。最常见的是 <span class="var-string">字符串</span>、<span class="var-number">数字</span>、<span class="var-float">浮点数</span> 和 <span class="var-bool">布尔值</span>。某些命令甚至具有复杂类型，例如特殊目录中的特定 <span class="file">文件名</span> 或实际上是 <span class="var-filter">过滤器</span>。
+</p></p>
+</div>
+<details class="note">
+<summary>仅 RCON</summary>
+<details class="info">
+<summary>/getrconcmds</summary>
+<p><strong>语法：</strong> <code>/getrconcmds</code></p>
+<p><strong>描述：</strong> 返回 RCON 可用的每个命令及其所需参数数量的列表。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li>无</li>
+</ul>
+<p><strong>权限：</strong> <code>RCON</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>/getrconcmds
+</span></code></pre></div></p>
+</details>
+</details>
+<details class="note">
+<summary>服务器管理</summary>
+<details class="info">
+<summary>/reloadcfg</summary>
+<p><strong>语法：</strong> <code>/reloadcfg</code></p>
+<p><strong>描述：</strong> 重新加载 <code>Config.json</code>、<code>whitelist.json</code> 和 <code>banlist.txt</code>。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li>无</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>RCON</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>/reloadcfg
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/addadminip</summary>
+<p><strong>语法：</strong> <code>/addadminip &lt;IP&gt;</code></p>
+<p><strong>描述：</strong> 将 IP 地址添加到管理员白名单。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;IP&gt;</code>：要添加为管理员的 IP 地址。</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>RCON</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>/addadminip 192.168.1.1
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/setadmin</summary>
+<p><strong>语法：</strong> <code>/setadmin &lt;UserId&gt;</code></p>
+<p><strong>描述：</strong> 临时授予/撤销玩家的管理员权限。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;UserId&gt;</code>：要授予/撤销管理员权限的玩家 ID。</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>RCON</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>/setadmin steam_76500000000000000
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/pgbroadcast</summary>
+<p><strong>语法：</strong> <code>/pgbroadcast &lt;Message&gt;</code></p>
+<p><strong>描述：</strong> 向服务器中的所有玩家发送消息。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;Message&gt;</code>：要广播的消息。</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>RCON</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>/pgbroadcast &quot;服务器即将重启。&quot;
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/adminlogin</summary>
+<p><strong>语法：</strong> <code>/adminlogin &lt;password&gt;</code></p>
+<p><strong>描述：</strong> 将您登录到管理员模式。需要您的管理员密码作为参数。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;password&gt;</code>：管理员密码。</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>/adminlogin mySecretPassword
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/adminlogout</summary>
+<p><strong>语法：</strong> <code>/adminlogout</code></p>
+<p><strong>描述：</strong> 将您从管理员模式登出。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li>无</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>/adminlogout
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/iwantplayerlist</summary>
+<p><strong>语法：</strong> <code>/iwantplayerlist</code></p>
+<p><strong>描述：</strong> 启用游戏内玩家列表覆盖层，允许您在按 ESC 时查看每个玩家的 UserId 和 Player UID。对于想要直接在游戏界面中查看详细玩家信息的服务器管理员和玩家很有用。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li>无</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>RCON</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>/iwantplayerlist
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/getpos</summary>
+<p><strong>语法：</strong> <code>/getpos [UserId]</code></p>
+<p><strong>描述：</strong> 获取您在世界中的当前位置，可用于传送、召唤和类似操作。如果提供了 [UserId]，则获取该玩家的位置。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>[UserId]</code>：（可选）要获取位置的玩家 ID。如果省略，则获取您自己的位置。</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>RCON</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>/getpos
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>/getpos steam_76500000000000000
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/settime</summary>
+<p><strong>语法：</strong> <code>/settime &lt;hour&gt;</code></p>
+<p><strong>描述：</strong> 更改 Palworld 中的时间。小时可以有以下值：<code>0</code> 到 <code>23</code>、<code>day</code> 和 <code>night</code>。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;hour&gt;</code>：小时值（0-23、day、night）。</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>RCON</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>/settime 12
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>/settime night
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/alert</summary>
+<p><strong>语法：</strong> <code>/alert &lt;message&gt;</code></p>
+<p><strong>描述：</strong> 向服务器上的所有玩家发送警报消息。此消息通常会在他们的屏幕上显著显示。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;message&gt;</code>：要作为警报广播的消息。</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>RCON</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>/alert 服务器将在 5 分钟后重启！
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/send</summary>
+<p><strong>语法：</strong> <code>/send &lt;type&gt; &lt;UserId&gt; &lt;Message&gt;</code></p>
+<p><strong>描述：</strong> 允许您向特定玩家发送消息或日志消息。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;type&gt;</code>：要发送的消息类型。可能的值：<ul>
+<li><code>msg</code>：常规聊天消息。</li>
+<li><code>log</code>：常规日志消息（白色，快速消失，较大字体）。</li>
+<li><code>ilog</code>：重要日志消息（蓝色，停留时间更长）。</li>
+<li><code>vilog</code>：非常重要的日志消息（蓝色，停留时间极长）。</li>
+</ul>
+</li>
+<li><code>&lt;UserId&gt;</code>：接收消息的玩家 ID。</li>
+<li><code>&lt;Message&gt;</code>：要发送的消息文本。</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>RCON</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>/send msg steam_76500000000000000 不要错过 Qonzer 的促销活动！
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>/send log steam_76500000000000000 不要错过 Qonzer 的促销活动！
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>/send ilog steam_76500000000000000 不要错过 Qonzer 的促销活动！
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>/send vilog steam_76500000000000000 不要错过 Qonzer 的促销活动！
+</span></code></pre></div></p>
+</details>
+</details>
+<details class="note">
+<summary>基地管理</summary>
+<details class="info">
+<summary>/getnearestbase</summary>
+<p><strong>语法：</strong> <code>/getnearestbase [X] [Y] [Z]</code></p>
+<p><strong>描述：</strong> 告诉您拥有距离您角色最近基地的公会名称。</p>
+<p><strong>注意：</strong> 通过 <strong>RCON</strong> 执行时，所有位置参数（<code>[X]</code> <code>[Y]</code> <code>[Z]</code>）<strong>都是必需的</strong>，因为 RCON 没有玩家角色来确定位置。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>[X]</code>：（可选）X 坐标。</li>
+<li><code>[Y]</code>：（可选）Y 坐标。</li>
+<li><code>[Z]</code>：（可选）Z 坐标。</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>RCON</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>/getnearestbase 100 200 50
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/gotonearestbase</summary>
+<p><strong>语法：</strong> <code>/gotonearestbase [X] [Y] [Z]</code></p>
+<p><strong>描述：</strong> 将您传送到该位置最近的基地。</p>
+<p><strong>注意：</strong> 通过 <strong>RCON</strong> 执行时，所有位置参数（<code>[X]</code> <code>[Y]</code> <code>[Z]</code>）<strong>都是必需的</strong>，因为 RCON 没有玩家角色来确定位置。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>[X]</code>：（可选）X 坐标。</li>
+<li><code>[Y]</code>：（可选）Y 坐标。</li>
+<li><code>[Z]</code>：（可选）Z 坐标。</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>/gotonearestbase 100 200 50
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/killnearestbase</summary>
+<p><strong>语法：</strong> <code>/killnearestbase [X] [Y] [Z]</code></p>
+<p><strong>描述：</strong> 摧毁最近的基地（<strong>请谨慎使用！</strong>）。</p>
+<p><strong>注意：</strong> 通过 <strong>RCON</strong> 执行时，所有位置参数（<code>[X]</code> <code>[Y]</code> <code>[Z]</code>）<strong>都是必需的</strong>，因为 RCON 没有玩家角色来确定位置。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>[X]</code>：（可选）X 坐标。</li>
+<li><code>[Y]</code>：（可选）Y 坐标。</li>
+<li><code>[Z]</code>：（可选）Z 坐标。</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>RCON</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>/killnearestbase 100 200 50
+</span></code></pre></div></p>
+</details>
+</details>
+<details class="note">
+<summary>玩家管理</summary>
+<details class="info">
+<summary>/kick</summary>
+<p><strong>语法：</strong> <code>/kick &lt;UserId&gt; [Reason="Kicked by Admin."]</code></p>
+<p><strong>描述：</strong> 将玩家从服务器踢出。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;UserId&gt;</code>：要踢出的玩家 ID。</li>
+<li><code>[Reason]</code>：（可选）踢出原因。默认："Kicked by Admin."</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>RCON</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>/kick steam_76500000000000000 &quot;在聊天中刷屏&quot;
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/ban</summary>
+<p><strong>语法：</strong> <code>/ban &lt;UserId&gt; [Reason="Banned by Admin."]</code></p>
+<p><strong>描述：</strong> 封禁并踢出服务器中的玩家。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;UserId&gt;</code>：要封禁的玩家 ID。</li>
+<li><code>[Reason]</code>：（可选）封禁原因。默认："Banned by Admin."</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>RCON</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>/ban gdk_25300000000000000 &quot;作弊&quot;
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/ipban</summary>
+<p><strong>语法：</strong> <code>/ipban &lt;UserId&gt; [Reason="Banned by Admin."]</code></p>
+<p><strong>描述：</strong> 封禁玩家的 IP 地址，然后将其从服务器踢出。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;UserId&gt;</code>：要 IP 封禁的玩家 ID。</li>
+<li><code>[Reason]</code>：（可选）封禁原因。默认："Banned by Admin."</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>RCON</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>/ipban steam_76500000000000000
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/banip</summary>
+<p><strong>语法：</strong> <code>/banip &lt;IP&gt;</code></p>
+<p><strong>描述：</strong> 从服务器封禁 IP 地址。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;IP&gt;</code>：要封禁的 IP 地址。</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>RCON</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>/banip 192.168.1.1
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/unbanip</summary>
+<p><strong>语法：</strong> <code>/unbanip &lt;IP&gt;</code></p>
+<p><strong>描述：</strong> 从封禁列表中移除 IP 地址。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;IP&gt;</code>：要解封的 IP 地址。</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>RCON</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>/unbanip 192.168.1.1
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/getip</summary>
+<p><strong>语法：</strong> <code>/getip &lt;UserId&gt;</code></p>
+<p><strong>描述：</strong> 显示玩家的 IP 地址。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;UserId&gt;</code>：玩家 ID。</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>RCON</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>/getip gdk_25300000000000000
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/whitelist_add</summary>
+<p><strong>语法：</strong> <code>/whitelist_add &lt;UserId&gt;</code></p>
+<p><strong>描述：</strong> 将 UserId 添加到白名单。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;UserId&gt;</code>：要添加到白名单的玩家 ID。</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>RCON</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>/whitelist_add steam_76500000000000000
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/whitelist_remove</summary>
+<p><strong>语法：</strong> <code>/whitelist_remove &lt;UserId&gt;</code></p>
+<p><strong>描述：</strong> 从白名单中移除 UserId。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;UserId&gt;</code>：要从白名单中移除的玩家 ID。</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>RCON</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>/whitelist_remove gdk_25300000000000000
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/whitelist_get</summary>
+<p><strong>语法：</strong> <code>/whitelist_get</code></p>
+<p><strong>描述：</strong> 显示白名单玩家的完整列表。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li>无</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>RCON</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>/whitelist_get
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/imcheater</summary>
+<p><strong>语法：</strong> <code>/imcheater</code></p>
+<p><strong>描述：</strong> 使用此命令测试服务器对作弊者的响应。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li>无</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>/imcheater
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/spectate</summary>
+<p><strong>语法：</strong> <code>/spectate</code></p>
+<p><strong>描述：</strong> 开启观察者模式。与按快捷键 <code>\</code> 相同，但快捷键对某些人不起作用，比如主机玩家。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li>无</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>/spectate
+</span></code></pre></div></p>
+</details>
+</details>
+<details class="note">
+<summary>玩家角色</summary>
+<details class="info">
+<summary>/tp</summary>
+<p><strong>语法：</strong> <code>/tp &lt;UserId1&gt; &lt;UserId2&gt;</code></p>
+<p><strong>描述：</strong> 将 UserId1 传送到 UserId2。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;UserId1&gt;</code>：要传送的玩家。</li>
+<li><code>&lt;UserId2&gt;</code>：目标玩家。</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>RCON</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>/tp steam_76500000000000000 gdk_25300000000000000
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/give_exp</summary>
+<p><strong>语法：</strong> <code>/give_exp &lt;UserId&gt; &lt;Amount&gt;</code></p>
+<p><strong>描述：</strong> 给予玩家经验值。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;UserId&gt;</code>：玩家 ID。</li>
+<li><code>&lt;Amount&gt;</code>：经验值数量。</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>RCON</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>/give_exp gdk_25300000000000000 1000
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/giveme_exp</summary>
+<p><strong>语法：</strong> <code>/giveme_exp &lt;Amount&gt;</code></p>
+<p><strong>描述：</strong> 给予自己经验值。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;Amount&gt;</code>：经验值数量。</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>/giveme_exp 1000
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/renameplayer</summary>
+<p><strong>语法：</strong> <code>/renameplayer &lt;UserId&gt; &lt;NewName&gt;</code></p>
+<p><strong>描述：</strong> 重命名玩家的昵称。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;UserId&gt;</code>：玩家 ID。</li>
+<li><code>&lt;NewName&gt;</code>：新昵称。</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>RCON</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>/renameplayer steam_76500000000000000 NewNickname
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/givestats</summary>
+<p><strong>语法：</strong> <code>/givestats &lt;UserId&gt; [Count=1]</code></p>
+<p><strong>描述：</strong> 给予玩家一个或多个未使用的属性点（负值将减少）。不影响已使用的点数。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;UserId&gt;</code>：接收属性点的玩家 ID。</li>
+<li><code>[Count]</code>：（可选）要给予的未使用属性点数量（可以为负数以减少）。默认：1。</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>RCON</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>/givestats steam_76500000000000000 5
+</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>/givestats steam_76500000000000000 -2
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/givemestats</summary>
+<p><strong>语法：</strong> <code>/givemestats [Count=1]</code></p>
+<p><strong>描述：</strong> 给予自己一个或多个未使用的属性点（负值将减少）。不影响已使用的点数。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>[Count]</code>：（可选）要给予自己的未使用属性点数量（可以为负数以减少）。默认：1。</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>/givemestats 5
+</span><span id="__span-31-2"><a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>/givemestats -2
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/godmode</summary>
+<p><strong>语法：</strong> <code>/godmode [on/off]</code></p>
+<p><strong>描述：</strong> 授予无敌状态，包括状态效果免疫，拒绝消耗食物并在激活时恢复生命值。如果在配置中启用，可选择允许一击必杀所有东西。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>[on/off]</code>：（可选）明确启用或禁用无敌模式。默认：切换开关。</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>/godmode
+</span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>/godmode on
+</span><span id="__span-32-3"><a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>/godmode off
+</span></code></pre></div></p>
+</details>
+</details>
+<details class="note">
+<summary>公会管理</summary>
+<details class="info">
+<summary>/setguildleader</summary>
+<p><strong>语法：</strong> <code>/setguildleader &lt;UserId&gt;</code></p>
+<p><strong>描述：</strong> 使目标玩家成为其当前公会的领导者。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;UserId&gt;</code>：要设为公会领导者的玩家 ID。</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>RCON</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>/setguildleader gdk_25300000000000000
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/exportguilds</summary>
+<p><strong>语法：</strong> <code>/exportguilds</code></p>
+<p><strong>描述：</strong> 将服务器的每个公会转储到 Pal/Binaries/Win64/PalDefender/guildexport.json。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li>无</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>RCON</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>/exportguilds
+</span></code></pre></div>
+示例输出文件：<code>Pal/Binaries/Win64/PalDefender/guildexport.json</code></p>
+</details>
+</details>
+<details class="note">
+<summary>物品</summary>
+<details class="info">
+<summary>/give</summary>
+<p><strong>语法：</strong> <code>/give &lt;UserId&gt; &lt;ItemId&gt; [Amount=1]</code></p>
+<p><strong>描述：</strong> 给予玩家一个物品，如果指定了数量则给予相应数量。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;UserId&gt;</code>：要给予物品的玩家 ID。</li>
+<li><code>&lt;ItemId&gt;</code>：要给予的物品。</li>
+<li><code>[Amount]</code>：（可选）数量。默认：1。</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>RCON</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>/give steam_76500000000000000 Sword 2
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/giveitems</summary>
+<p><strong>语法：</strong> <code>/giveitems &lt;UserId&gt; &lt;ItemId&gt;[:&lt;Amount&gt;] ...</code></p>
+<p><strong>描述：</strong> 在一个命令中给予玩家多个物品，如果指定了数量则用冒号分隔每个物品的数量。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;UserId&gt;</code>：要给予物品的玩家 ID。</li>
+<li><code>&lt;ItemId&gt;[:&lt;Amount&gt;] ...</code>：物品列表和可选数量。</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>RCON</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>/giveitems gdk_25300000000000000 Sword:2 Shield:1
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/giveme</summary>
+<p><strong>语法：</strong> <code>/giveme &lt;ItemId&gt; [Amount=1]</code></p>
+<p><strong>描述：</strong> 给予自己一个物品，如果指定了数量则给予相应数量。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;ItemId&gt;</code>：要给予自己的物品。</li>
+<li><code>[Amount]</code>：（可选）数量。默认：1。</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>/giveme Sword 3
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/delitem</summary>
+<p><strong>语法：</strong> <code>/delitem &lt;UserId&gt; &lt;ItemId&gt; [Amount=1]</code></p>
+<p><strong>描述：</strong> 从玩家处删除一个物品，如果指定了数量则删除相应数量。默认为 <code>1</code>，只会删除该物品的 1 个实例。使用 <code>all</code> 代替 <code>1</code> 以删除所有实例。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;UserId&gt;</code>：玩家 ID。</li>
+<li><code>&lt;ItemId&gt;</code>：要删除的物品。</li>
+<li><code>[Amount]</code>：（可选）数量。默认：1。使用 <code>all</code> 删除所有实例。</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>RCON</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>/delitem steam_76500000000000000 Sword 1
+</span><span id="__span-38-2"><a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>/delitem gdk_25300000000000000 Sword all
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/give_relic</summary>
+<p><strong>语法：</strong> <code>/give_relic &lt;UserId&gt; &lt;Amount&gt;</code></p>
+<p><strong>描述：</strong> 给予玩家一个或多个利弗蒙克雕像。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;UserId&gt;</code>：接收利弗蒙克雕像的玩家 ID。</li>
+<li><code>&lt;Amount&gt;</code>：要给予的利弗蒙克雕像数量。</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>RCON</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>/give_relic steam_76500000000000000 5
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/giveme_relic</summary>
+<p><strong>语法：</strong> <code>/giveme_relic &lt;Amount&gt;</code></p>
+<p><strong>描述：</strong> 给予自己一个或多个利弗蒙克雕像。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;Amount&gt;</code>：要给予自己的利弗蒙克雕像数量。</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>/giveme_relic 5
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/delitems</summary>
+<p><strong>语法：</strong> <code>/delitems &lt;UserId&gt; &lt;ItemId&gt;[:&lt;Amount&gt;] ...</code></p>
+<p><strong>描述：</strong> 在一个命令中从玩家处删除多个物品，如果指定了数量则用冒号分隔每个物品的数量。使用 <code>all</code> 代替 <code>1</code> 以删除所有实例。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;UserId&gt;</code>：玩家 ID。</li>
+<li><code>&lt;ItemId&gt;[:&lt;Amount&gt;] ...</code>：物品列表和可选数量。</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>RCON</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>/delitems steam_76500000000000000 Sword:1 Shield:all
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/clearinv</summary>
+<p><strong>语法：</strong> <code>/clearinv &lt;UserId&gt; [Container=items] ...</code></p>
+<p><strong>描述：</strong> 清除玩家库存中的指定容器。可用容器：<code>items</code>、<code>keyitems</code>、<code>armor</code>、<code>weapons</code>、<code>food</code>、<code>dropslot</code> 或 <code>all</code>。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;UserId&gt;</code>：玩家 ID。</li>
+<li><code>[Container] ...</code>：（可选）要清除的容器。默认：items。</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>RCON</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>/clearinv steam_76500000000000000 items
+</span><span id="__span-42-2"><a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a>/clearinv gdk_25300000000000000 all
+</span></code></pre></div></p>
+</details>
+</details>
+<details class="note">
+<summary>帕鲁</summary>
+<details class="info">
+<summary>/givepal</summary>
+<p><strong>语法：</strong> <code>/givepal &lt;UserId&gt; &lt;PalId&gt; [Level=1]</code></p>
+<p><strong>描述：</strong> 在指定等级给予玩家一个帕鲁。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;UserId&gt;</code>：玩家 ID。</li>
+<li><code>&lt;PalId&gt;</code>：要给予的帕鲁。<ul>
+<li><strong>注意：</strong> 使用帕鲁的开发者名称，例如 <code>WeaselDragon</code>（滑水蛇）。完整列表请参见 <a href="https://paldeck.cc/pals">paldeck.cc/pals</a>。</li>
+</ul>
+</li>
+<li><code>[Level]</code>：（可选）帕鲁等级。默认：1。</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>RCON</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>/givepal gdk_25300000000000000 WeaselDragon 10
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/givepal_j</summary>
+<p><strong>语法：</strong> <code>/givepal_j &lt;UserID&gt; &lt;PalTemplate&gt;</code></p>
+<p><strong>描述：</strong> 给予玩家一个由 PalTemplate 文件定义的帕鲁。不再支持嵌入式 JSON；仅接受文件名。</p>
+<p><strong>注意：</strong> 您不需要在文件名中包含 .json 扩展名；如果缺少，系统会自动添加。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;UserID&gt;</code>：玩家 ID。</li>
+<li><code>&lt;PalTemplate&gt;</code>：PalTemplate 文件的名称（参见 <a href="/FileTypes/PalTemplate">PalTemplate</a>）。</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>RCON</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-44-1"><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>/givepal_j steam_76500000000000000 MyPalTemplate
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/givemepal</summary>
+<p><strong>语法：</strong> <code>/givemepal &lt;PalId&gt; [Level=1]</code></p>
+<p><strong>描述：</strong> 在指定等级给予自己一个帕鲁。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;PalId&gt;</code>：要给予自己的帕鲁。<ul>
+<li><strong>注意：</strong> 使用帕鲁的开发者名称，例如 <code>WeaselDragon</code>（滑水蛇）。完整列表请参见 <a href="https://paldeck.cc/pals">paldeck.cc/pals</a>。</li>
+</ul>
+</li>
+<li><code>[Level]</code>：（可选）帕鲁等级。默认：1。</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-45-1"><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>/givemepal WeaselDragon 10
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/givemepal_j</summary>
+<p><strong>语法：</strong> <code>/givemepal_j &lt;PalTemplate&gt;</code></p>
+<p><strong>描述：</strong> 给予自己一个由 PalTemplate 文件定义的帕鲁。不再支持嵌入式 JSON；仅接受文件名。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;PalTemplate&gt;</code>：PalTemplate 文件的名称（参见 <a href="/FileTypes/PalTemplate">PalTemplate</a>）。</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-46-1"><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a>/givemepal_j MyPalTemplate
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/spawnpal</summary>
+<p><strong>语法：</strong>
+以下任一形式都可以：</p>
+<ul>
+<li><code>/spawnpal &lt;PalID&gt;</code></li>
+<li><code>/spawnpal &lt;PalID&gt; [Level]</code></li>
+<li><code>/spawnpal &lt;PalID&gt; [x] [y] [z]</code></li>
+<li><code>/spawnpal &lt;PalID&gt; [x] [y] [z] [Level]</code></li>
+</ul>
+<p><strong>描述：</strong> 在您附近或绝对位置生成一个帕鲁。<strong>RCON 必须指定 x、y 和 z！</strong></p>
+<p><strong>注意：</strong> 除等级外，所有属性都是随机的。</p>
+<p><strong>参数：</strong>
+- <code>&lt;PalID&gt;</code>：要生成的帕鲁。
+- <code>[x]</code>：（可选）帕鲁的 x 位置。默认：相对于调用玩家。
+- <code>[y]</code>：（可选）帕鲁的 y 位置。默认：相对于调用玩家。
+- <code>[z]</code>：（可选）帕鲁的 z 位置。默认：相对于调用玩家。
+- <code>[Level]</code>：（可选）帕鲁等级。默认：1。</p>
+<p><strong>权限：</strong> <code>Chat</code>、<code>RCON</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-47-1"><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a>/spawnpal Anubis 255
+</span></code></pre></div>
+<em>生成一个等级为 255 的阿努比斯！</em></p>
+</details>
+<details class="info">
+<summary>/spawnpal_j</summary>
+<p><strong>语法：</strong></p>
+<p>以下任一形式都可以：</p>
+<ul>
+<li><code>/spawnpal_j &lt;PalTemplate&gt;</code></li>
+<li><code>/spawnpal &lt;PalTemplate&gt; [x] [y] [z]</code></li>
+</ul>
+<p><strong>描述：</strong> 在您附近或绝对位置生成一个帕鲁。<strong>RCON 必须指定 x、y 和 z！</strong></p>
+<p><strong>注意：</strong> 除等级外，所有属性都是随机的。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;PalTemplate&gt;</code>：要使用的 PalTemplate 文件名。</li>
+<li><code>[x]</code>：（可选）帕鲁的 x 位置。默认：相对于调用玩家。</li>
+<li><code>[y]</code>：（可选）帕鲁的 y 位置。默认：相对于调用玩家。</li>
+<li><code>[z]</code>：（可选）帕鲁的 z 位置。默认：相对于调用玩家。</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>RCON</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-48-1"><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a>/spawnpal Anubis 255
+</span></code></pre></div>
+<em>生成一个等级为 255 的阿努比斯！</em></p>
+</details>
+<details class="info">
+<summary>/summon</summary>
+<p><strong>语法：</strong> <code>/summon &lt;PalSummon&gt;</code></p>
+<p><strong>描述：</strong> 使用提供的 PalSummon 文件生成一个帕鲁。</p>
+<p><strong>注意：</strong> 您不需要在文件名中包含 .json 扩展名；如果缺少，系统会自动添加。</p>
+<p><strong>参数：</strong>
+- <code>&lt;PalSummon&gt;</code>：要使用的 PalSummon 文件名。</p>
+<p><strong>权限：</strong> <code>Chat</code>、<code>RCON</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-49-1"><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a>/summon PalSummon
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/giveegg</summary>
+<p><strong>语法：</strong> <code>/giveegg &lt;UserId&gt; &lt;EggId&gt; &lt;PalId&gt; [Level]</code></p>
+<p><strong>描述：</strong> 给予目标用户一个包含特定帕鲁的帕鲁蛋，可选择调整等级。</p>
+<p><strong>参数：</strong></p>
+<details class="quote">
+<summary>&lt;UserId&gt;</summary>
+<p><strong>描述：</strong> 接收蛋的玩家 ID。</p>
+</details>
+<details class="quote">
+<summary>&lt;EggId&gt;</summary>
+<p><strong>描述：</strong> 要给予的蛋类型。</p>
+<p><strong>注意：</strong> 每种类型允许的值从 01（最小）到 05（最大）：</p>
+<ul>
+<li><code>PalEgg_Dark_01</code>–<code>PalEgg_Dark_05</code></li>
+<li><code>PalEgg_Dragon_01</code>–<code>PalEgg_Dragon_05</code></li>
+<li><code>PalEgg_Earth_01</code>–<code>PalEgg_Earth_05</code></li>
+<li><code>PalEgg_Electricity_01</code>–<code>PalEgg_Electricity_05</code></li>
+<li><code>PalEgg_Fire_01</code>–<code>PalEgg_Fire_05</code></li>
+<li><code>PalEgg_Ice_01</code>–<code>PalEgg_Ice_05</code></li>
+<li><code>PalEgg_Leaf_01</code>–<code>PalEgg_Leaf_05</code></li>
+<li><code>PalEgg_Normal_01</code>–<code>PalEgg_Normal_05</code></li>
+<li><code>PalEgg_Water_01</code>–<code>PalEgg_Water_05</code></li>
+</ul>
+</details>
+<details class="quote">
+<summary>&lt;PalId&gt;</summary>
+<p><strong>描述：</strong> 蛋内的帕鲁。</p>
+<p><strong>注意：</strong> 使用帕鲁的开发者名称，例如 <code>WeaselDragon</code>（滑水蛇）。完整列表请参见 <a href="https://paldeck.cc/pals">paldeck.cc/pals</a>。</p>
+</details>
+<details class="quote">
+<summary>[Level]</summary>
+<p><strong>描述：</strong> （可选）蛋内帕鲁的等级。</p>
+</details>
+<p><strong>权限：</strong> <code>Chat</code>、<code>RCON</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-50-1"><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a>/giveegg steam_76500000000000000 PalEgg_Ice_01 WeaselDragon 10
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/givemeegg</summary>
+<p><strong>语法：</strong> <code>/givemeegg &lt;EggId&gt; &lt;PalId&gt; [Level]</code></p>
+<p><strong>描述：</strong> 给予自己一个包含特定帕鲁的帕鲁蛋，可选择调整等级。</p>
+<p><strong>参数：</strong></p>
+<details class="quote">
+<summary>&lt;EggId&gt;</summary>
+<p><strong>描述：</strong> 要给予自己的蛋类型。</p>
+<p><strong>注意：</strong> 每种类型允许的值从 01（最小）到 05（最大）：</p>
+<ul>
+<li><code>PalEgg_Dark_01</code>–<code>PalEgg_Dark_05</code></li>
+<li><code>PalEgg_Dragon_01</code>–<code>PalEgg_Dragon_05</code></li>
+<li><code>PalEgg_Earth_01</code>–<code>PalEgg_Earth_05</code></li>
+<li><code>PalEgg_Electricity_01</code>–<code>PalEgg_Electricity_05</code></li>
+<li><code>PalEgg_Fire_01</code>–<code>PalEgg_Fire_05</code></li>
+<li><code>PalEgg_Ice_01</code>–<code>PalEgg_Ice_05</code></li>
+<li><code>PalEgg_Leaf_01</code>–<code>PalEgg_Leaf_05</code></li>
+<li><code>PalEgg_Normal_01</code>–<code>PalEgg_Normal_05</code></li>
+<li><code>PalEgg_Water_01</code>–<code>PalEgg_Water_05</code></li>
+</ul>
+</details>
+<details class="quote">
+<summary>&lt;PalId&gt;</summary>
+<p><strong>描述：</strong> 蛋内的帕鲁。</p>
+<p><strong>注意：</strong> 使用帕鲁的开发者名称，例如 <code>WeaselDragon</code>（滑水蛇）。完整列表请参见 <a href="https://paldeck.cc/pals">paldeck.cc/pals</a>。</p>
+</details>
+<details class="quote">
+<summary>[Level]</summary>
+<p><strong>描述：</strong> （可选）蛋内帕鲁的等级。</p>
+</details>
+<p><strong>权限：</strong> <code>Chat</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-51-1"><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a>/givemeegg PalEgg_Ice_01 WeaselDragon 10
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/giveegg_j</summary>
+<p><strong>语法：</strong> <code>/giveegg_j &lt;EggId&gt; &lt;PalTemplate&gt; [Level]</code></p>
+<p><strong>描述：</strong> 给予一个包含由 PalTemplate 文件定义的帕鲁的帕鲁蛋，可选择调整等级。</p>
+<p><strong>参数：</strong></p>
+<details class="quote">
+<summary>&lt;EggId&gt;</summary>
+<p><strong>描述：</strong> 要给予的蛋类型。</p>
+<p><strong>注意：</strong> 每种类型允许的值从 01（最小）到 05（最大）：</p>
+<ul>
+<li><code>PalEgg_Dark_01</code>–<code>PalEgg_Dark_05</code></li>
+<li><code>PalEgg_Dragon_01</code>–<code>PalEgg_Dragon_05</code></li>
+<li><code>PalEgg_Earth_01</code>–<code>PalEgg_Earth_05</code></li>
+<li><code>PalEgg_Electricity_01</code>–<code>PalEgg_Electricity_05</code></li>
+<li><code>PalEgg_Fire_01</code>–<code>PalEgg_Fire_05</code></li>
+<li><code>PalEgg_Ice_01</code>–<code>PalEgg_Ice_05</code></li>
+<li><code>PalEgg_Leaf_01</code>–<code>PalEgg_Leaf_05</code></li>
+<li><code>PalEgg_Normal_01</code>–<code>PalEgg_Normal_05</code></li>
+<li><code>PalEgg_Water_01</code>–<code>PalEgg_Water_05</code></li>
+</ul>
+</details>
+<details class="quote">
+<summary>&lt;PalTemplate&gt;</summary>
+<p><strong>描述：</strong> 要使用的 PalTemplate 文件名。</p>
+<p><strong>注意：</strong> 您不需要在文件名中包含 .json 扩展名；如果缺少，系统会自动添加。参见 <a href="/FileTypes/PalTemplate">PalTemplate</a>。</p>
+</details>
+<details class="quote">
+<summary>[Level]</summary>
+<p><strong>描述：</strong> （可选）蛋内帕鲁的等级。</p>
+</details>
+<p><strong>权限：</strong> <code>Chat</code>、<code>RCON</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-52-1"><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a>/giveegg_j PalEgg_Ice_01 MyPalTemplate 10
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/givemeegg_j</summary>
+<p><strong>语法：</strong> <code>/givemeegg_j &lt;EggId&gt; &lt;PalTemplate&gt; [Level]</code></p>
+<p><strong>描述：</strong> 给予自己一个包含由 PalTemplate 文件定义的帕鲁的帕鲁蛋，可选择调整等级。</p>
+<p><strong>参数：</strong></p>
+<details class="quote">
+<summary>&lt;EggId&gt;</summary>
+<p><strong>描述：</strong> 要给予自己的蛋类型。</p>
+<p><strong>注意：</strong> 每种类型允许的值从 01（最小）到 05（最大）：</p>
+<ul>
+<li><code>PalEgg_Dark_01</code>–<code>PalEgg_Dark_05</code></li>
+<li><code>PalEgg_Dragon_01</code>–<code>PalEgg_Dragon_05</code></li>
+<li><code>PalEgg_Earth_01</code>–<code>PalEgg_Earth_05</code></li>
+<li><code>PalEgg_Electricity_01</code>–<code>PalEgg_Electricity_05</code></li>
+<li><code>PalEgg_Fire_01</code>–<code>PalEgg_Fire_05</code></li>
+<li><code>PalEgg_Ice_01</code>–<code>PalEgg_Ice_05</code></li>
+<li><code>PalEgg_Leaf_01</code>–<code>PalEgg_Leaf_05</code></li>
+<li><code>PalEgg_Normal_01</code>–<code>PalEgg_Normal_05</code></li>
+<li><code>PalEgg_Water_01</code>–<code>PalEgg_Water_05</code></li>
+</ul>
+</details>
+<details class="quote">
+<summary>&lt;PalTemplate&gt;</summary>
+<p><strong>描述：</strong> 要使用的 PalTemplate 文件名。</p>
+<p><strong>注意：</strong> 您不需要在文件名中包含 .json 扩展名；如果缺少，系统会自动添加。参见 <a href="/FileTypes/PalTemplate">PalTemplate</a>。</p>
+</details>
+<details class="quote">
+<summary>[Level]</summary>
+<p><strong>描述：</strong> （可选）蛋内帕鲁的等级。</p>
+</details>
+<p><strong>权限：</strong> <code>Chat</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-53-1"><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a>/givemeegg_j PalEgg_Ice_01 MyPalTemplate 10
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/jetragon</summary>
+<p><strong>语法：</strong> <code>/jetragon</code></p>
+<p><strong>描述：</strong> 给予您一个管理员-喷气龙帕鲁（它飞得...很快）。</p>
+<p><strong>参数：</strong>
+- 无</p>
+<p><strong>权限：</strong> <code>Chat</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-54-1"><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a>/jetragon
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/catwaifu</summary>
+<p><strong>语法：</strong> <code>/catwaifu</code></p>
+<p><strong>描述：</strong> 给予您一个管理员-猫娘，可以增强您的角色属性。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li>无</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-55-1"><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a>/catwaifu
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/exportpals</summary>
+<p><strong>语法：</strong> <code>/exportpals [UserId]</code></p>
+<p><strong>描述：</strong> 将玩家的每个帕鲁导出到 Pal/Binaries/Win64/PalDefender/pals/exported/<UserId>/ 的 PalTemplate 文件。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>[UserId]</code>：（可选）要导出帕鲁的玩家 ID。如果省略，则导出您自己的帕鲁。</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>RCON</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-56-1"><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a>/exportpals steam_76500000000000000
+</span><span id="__span-56-2"><a id="__codelineno-56-2" name="__codelineno-56-2" href="#__codelineno-56-2"></a>/exportpals
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/deletepals</summary>
+<p><strong>语法：</strong> <code>/deletepals &lt;UserId&gt; &lt;PalFilter&gt;</code></p>
+<p><strong>描述：</strong> 使用高级过滤器从指定用户删除帕鲁。过滤器允许您在一个命令中指定多个条件（例如帕鲁 ID、等级、性别、被动技能等）。请在使用重要数据之前在安全环境中测试。</p>
+<p><strong>参数：</strong></p>
+<details class="quote">
+<summary>&lt;UserId&gt;</summary>
+<p><strong>描述：</strong> 要删除帕鲁的玩家 ID。</p>
+</details>
+<details class="quote">
+<summary>&lt;PalFilter&gt;</summary>
+<p><strong>描述：</strong> 用于选择要删除的帕鲁的过滤器关键字集合。</p>
+<p><strong>注意：</strong> 可以在一个命令中组合多个关键字。</p>
+<p>可用过滤器关键字：</p>
+<ul>
+<li><code>ID</code>：PalID 或 PalID 列表（逗号分隔）</li>
+<li><code>Nick</code>：字符串（帕鲁名称）</li>
+<li><code>Gender</code>：<code>male</code> 或 <code>female</code></li>
+<li><code>Level</code>：数字，支持符号 <code>&lt;</code>、<code>&gt;</code>、<code>&lt;=</code>、<code>&gt;=</code>、<code>=</code>、<code>!=</code></li>
+<li><code>Rank</code>：数字，支持符号 <code>&lt;</code>、<code>&gt;</code>、<code>&lt;=</code>、<code>&gt;=</code>、<code>=</code>、<code>!=</code></li>
+<li><code>Lucky</code>：<code>true</code> 或 <code>false</code>（闪光）</li>
+<li><code>Passives</code>：PassiveSkill 或 PassiveSkill 列表（逗号分隔）</li>
+<li><code>Limit</code>：数字（要删除的最大帕鲁数量）</li>
+</ul>
+<p><strong>示例过滤器：</strong></p>
+<ul>
+<li><code>ID Serpent, PinkLizard Level&gt;10 Gender male Limit 3</code></li>
+<li><code>ID Anubis Rank&gt;=3</code></li>
+<li><code>Passives CraftSpeed_up1,CraftSpeed_up2,Rare,PAL_CorporateSlave</code></li>
+</ul>
+<p>更多详细信息，请参见 <a href="https://github.com/Ultimeit/PalDefender/blob/beta/Wiki/Commands/deletepals.md">PalFilter 文档</a>。</p>
+</details>
+<p><strong>权限：</strong> <code>Chat</code>、<code>RCON</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-57-1"><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a>/deletepals 76567890987654321 ID Serpent, PinkLizard Level&gt;10 Gender male Limit 3
+</span><span id="__span-57-2"><a id="__codelineno-57-2" name="__codelineno-57-2" href="#__codelineno-57-2"></a>/deletepals 76567890987654321 ID Anubis Rank&gt;=3
+</span><span id="__span-57-3"><a id="__codelineno-57-3" name="__codelineno-57-3" href="#__codelineno-57-3"></a>/deletepals 76561198033277828 Passives CraftSpeed_up1,CraftSpeed_up2,Rare,PAL_CorporateSlave
+</span></code></pre></div></p>
+</details>
+</details>
+<details class="note">
+<summary>研究树</summary>
+<details class="info">
+<summary>/learntech</summary>
+<p><strong>语法：</strong> <code>/learntech &lt;UserId&gt; &lt;TechID&gt;</code></p>
+<p><strong>描述：</strong> 让玩家学习特定技术。使用 <code>all</code> 解锁所有内容。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;UserId&gt;</code>：玩家 ID。</li>
+<li><code>&lt;TechID&gt;</code>：要学习的技术。使用 <code>all</code> 解锁所有内容。</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>RCON</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-58-1"><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a>/learntech steam_76500000000000000 Tech001
+</span><span id="__span-58-2"><a id="__codelineno-58-2" name="__codelineno-58-2" href="#__codelineno-58-2"></a>/learntech gdk_25300000000000000 all
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/unlearntech</summary>
+<p><strong>语法：</strong> <code>/unlearntech &lt;UserId&gt; &lt;TechID&gt;</code></p>
+<p><strong>描述：</strong> 让玩家忘记特定技术。使用 <code>all</code> 移除所有内容。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;UserId&gt;</code>：玩家 ID。</li>
+<li><code>&lt;TechID&gt;</code>：要忘记的技术。使用 <code>all</code> 移除所有内容。</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>RCON</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-59-1"><a id="__codelineno-59-1" name="__codelineno-59-1" href="#__codelineno-59-1"></a>/unlearntech gdk_25300000000000000 Tech001
+</span><span id="__span-59-2"><a id="__codelineno-59-2" name="__codelineno-59-2" href="#__codelineno-59-2"></a>/unlearntech steam_76500000000000000 all
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/givetechpoints</summary>
+<p><strong>语法：</strong> <code>/givetechpoints &lt;UserId&gt; &lt;Amount&gt;</code></p>
+<p><strong>描述：</strong> 给予目标用户 X 个技术点数。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;UserId&gt;</code>：接收技术点数的玩家 ID。</li>
+<li><code>&lt;Amount&gt;</code>：要给予的技术点数数量。</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>RCON</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-60-1"><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a>/givetechpoints steam_76500000000000000 10
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/givebosstechpoints</summary>
+<p><strong>语法：</strong> <code>/givebosstechpoints &lt;UserId&gt; &lt;Amount&gt;</code></p>
+<p><strong>描述：</strong> 给予目标用户 X 个古代技术点数。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;UserId&gt;</code>：接收古代技术点数的玩家 ID。</li>
+<li><code>&lt;Amount&gt;</code>：要给予的古代技术点数数量。</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>RCON</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-61-1"><a id="__codelineno-61-1" name="__codelineno-61-1" href="#__codelineno-61-1"></a>/givebosstechpoints steam_76500000000000000 5
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/givemetechpoints</summary>
+<p><strong>语法：</strong> <code>/givemetechpoints &lt;Amount&gt;</code></p>
+<p><strong>描述：</strong> 给予自己 X 个技术点数。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;Amount&gt;</code>：要给予自己的技术点数数量。</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-62-1"><a id="__codelineno-62-1" name="__codelineno-62-1" href="#__codelineno-62-1"></a>/givemetechpoints 10
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/givemebosstechpoints</summary>
+<p><strong>语法：</strong> <code>/givemebosstechpoints &lt;Amount&gt;</code></p>
+<p><strong>描述：</strong> 给予自己 X 个古代技术点数。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li><code>&lt;Amount&gt;</code>：要给予自己的古代技术点数数量。</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-63-1"><a id="__codelineno-63-1" name="__codelineno-63-1" href="#__codelineno-63-1"></a>/givemebosstechpoints 5
+</span></code></pre></div></p>
+</details>
+</details>
+<details class="note">
+<summary>数据挖掘</summary>
+<details class="info">
+<summary>/gettechids</summary>
+<p><strong>语法：</strong> <code>/gettechids</code></p>
+<p><strong>描述：</strong> 返回所有可用技术 ID 的列表。RCON 获取 JSON 输出。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li>无</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>RCON</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-64-1"><a id="__codelineno-64-1" name="__codelineno-64-1" href="#__codelineno-64-1"></a>/gettechids
+</span></code></pre></div></p>
+</details>
+<details class="info">
+<summary>/getskinids</summary>
+<p><strong>语法：</strong> <code>/getskinids</code></p>
+<p><strong>描述：</strong> 返回所有可用帕鲁皮肤 ID 的列表。RCON 获取 JSON 输出。</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li>无</li>
+</ul>
+<p><strong>权限：</strong> <code>Chat</code>、<code>RCON</code>、<code>Admin</code></p>
+<p><strong>示例：</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-65-1"><a id="__codelineno-65-1" name="__codelineno-65-1" href="#__codelineno-65-1"></a>/getskinids
+</span></code></pre></div></p>
+</details>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/Ultimeit/PalDefender" target="_blank" rel="noopener" title="PalDefender on GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.indexes", "navigation.path", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "navigation.tracking", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "content.tooltips"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
