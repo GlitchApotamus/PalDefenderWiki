@@ -14,7 +14,7 @@ The code is closed source and we dont have any plans to release it.
 ## **Get the best servers for modding at [Qonzer](https://qonzer.com/aff.php?aff=61) *(Affiliate Link)*.** 
 *They support PalDefender right out of the box—no special setup or technical knowledge needed. It just works.*
 
-**A 10% Discount code for qonzer servers can be found on our Discord! Check out the server-host channel.**
+**A 15% Discount code for qonzer servers can be found on our Discord! Check out the server-host channel.**
 
 
 ## PalDefender Wiki
